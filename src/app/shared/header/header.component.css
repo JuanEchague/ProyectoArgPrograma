@@ -1,0 +1,33 @@
+.navegacion {
+    width: 70%;
+    max-width: 1000px;
+
+    margin: 5% auto;
+    background: rgb(56, 56, 56);
+    border-radius: 20px;
+}
+
+.navegacion ul {
+    list-style: none;
+
+}
+
+.menu>li {
+    position: relative;
+    display: inline-block;
+
+}
+
+.menu>li>a {
+    display: block;
+    padding: 15px 20px;
+    color: #ffffff;
+    font-family: Impact, sans-serif;
+    text-decoration: none;
+    display: flex;
+}
+
+.menu li a:hover {
+    color: rgb(250, 0, 83);
+    transition: all .3s;
+}
