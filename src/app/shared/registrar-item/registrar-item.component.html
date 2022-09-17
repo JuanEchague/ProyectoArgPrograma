@@ -1,0 +1,42 @@
+<app-header></app-header>
+<br>
+<div class="col-md-6 offset-md-3">
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>Nombre: </label>
+            <input type="text"
+                class="form-control"
+                id="nombre"
+                [(ngModel)]="item.nombre"
+                name="nombre">
+
+        </div>
+        <br>
+        <div class="form-group">
+            <label>Comentario: </label>
+            <textarea type="text"
+                rows="5"
+                class="form-control"
+                id="comentario"
+                [(ngModel)]="item.comentario"
+                name="comentario">
+            </textarea>
+        </div>
+        <br>
+        <div class="form-group">
+            <label>E-Mail(Esta informacion permanecera oculta!): </label>
+            <input type="text"
+                class="form-control"
+                id="email"
+                [(ngModel)]="item.email"
+                name="email">
+
+        </div>
+        <br>
+        <button class="btn btn-success">Comentar</button>
+        <br>
+    </form>
+    <br>
+</div>
+
+<app-footer></app-footer>
