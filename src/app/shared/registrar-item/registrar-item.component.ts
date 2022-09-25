@@ -23,7 +23,7 @@ export class RegistrarItemComponent implements OnInit {
     },error => console.log(error));
   }
 irAComentarios(){
-  this.router.navigate(['sitio'])
+  this.router.navigate(['sitio']);
 }
 onSubmit(){
   this.guardarItem();

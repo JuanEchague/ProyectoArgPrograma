@@ -10,6 +10,8 @@ import { HttpClientModule } from'@angular/common/http';
 import { SitioComponent } from './sitio/sitio.component';
 import { RegistrarItemComponent } from './registrar-item/registrar-item.component';
 import { FormsModule } from '@angular/forms';
+import { ActualizarItemComponent } from './actualizar-item/actualizar-item.component';
+import { ItemDetallesComponent } from './item-detalles/item-detalles.component';
 
 
 @NgModule({
@@ -21,13 +23,15 @@ import { FormsModule } from '@angular/forms';
     CardComponent,
     ListaItemsComponent,
     SitioComponent,
-    RegistrarItemComponent
+    RegistrarItemComponent,
+    ActualizarItemComponent,
+    ItemDetallesComponent
   ],
   imports: [
     CommonModule,
     HttpClientModule,
     FormsModule
   ],
-  exports:[HeaderComponent, FooterComponent, CarouselComponent, TabsComponent, ListaItemsComponent,SitioComponent,RegistrarItemComponent]
+  exports:[HeaderComponent, FooterComponent, CarouselComponent, TabsComponent, ListaItemsComponent,SitioComponent,RegistrarItemComponent,ActualizarItemComponent]
 })
 export class SharedModule { }

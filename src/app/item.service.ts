@@ -11,7 +11,7 @@ export class ItemService {
   private baseURL="http://localhost:8080/api/v1/items";
 
   constructor(private httpClient : HttpClient) { }
-  //obtener items
+  //obtener lista de items
   obtenerListaItems():Observable<Item[]>{
     return this.httpClient.get<Item[]>(`${this.baseURL}`);
   }
@@ -20,5 +20,20 @@ export class ItemService {
   registrarItem(item:Item) : Observable<Object>{
     return this.httpClient.post(`${this.baseURL}`,item);
 
+  }
+  
+  //actualizar items
+  actualizarItem(id:number,item:Item) : Observable<Object>{
+    return this.httpClient.put<Item>(`${this.baseURL}/${id}`,item);
+  }
+
+  //buscar item por id
+  obtenerItemPorId(id:number):Observable<Item>{
+    return this.httpClient.get<Item>(`${this.baseURL}/${id}`);
+  }
+
+  //eliminar item
+  eliminarItem(id:number): Observable<Object>{
+    return this.httpClient.delete(`${this.baseURL}/${id}`);
   }
 }

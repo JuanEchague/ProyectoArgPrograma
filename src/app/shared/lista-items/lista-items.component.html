@@ -5,6 +5,7 @@
             <th>Nombre</th>
             <th>Comentario</th>
             <th>E-mail</th>
+            <th>Acciones</th>
         </tr>
     </thead>
     <tbody>
@@ -12,7 +13,9 @@
             <td>{{item.nombre}}</td>
             <td>{{item.comentario}}</td>
             <td>Informacion oculta</td>
-
+            <td><button (click)="actualizarItem(item.id)" class="btn btn-info">Actualizar</button><button
+                    (click)="eliminarItem(item.id)" class="btn btn-info"
+                    style="margin: left 10px;">Eliminar</button></td>
         </tr>
 
     </tbody>
